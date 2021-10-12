@@ -9,6 +9,7 @@ const fact = $("#fact");
 
 function setData() {
   clearList();
+  console.log(data[8]);
   $("#member-image").attr("src", "assets/image/" + data[index].image);
   h1.html(data[index].nama);
   $.each(data[index].fakta, function (i, v) {
@@ -54,9 +55,7 @@ $(document).bind("mousewheel", function (e) {
         index++;
       }
 
-      if (index != data.length - 1) {
-        initData();
-      }
+      initData();
       bawah = 0;
     }
   }
