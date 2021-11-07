@@ -60,6 +60,14 @@
   animation-name: fadeSlideRight;
 }
 
+.animation.fade-slide-down {
+  animation-name: fadeSlideDown;
+}
+
+.animation.fade-slide-up {
+  animation-name: fadeSlideDown;
+}
+
 @keyframes zoom {
   0% {
     opacity: 0;
@@ -110,5 +118,25 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0%;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0%;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 100%;
   }
 }
