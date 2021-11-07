@@ -1,11 +1,14 @@
 $(document).ready(function () {
-  init();
+  setTimeout(function () {
+    $(".splash-screen").fadeOut();
+    init();
+  }, 3000);
 });
 
 function init() {
   let images = $("img");
   $.each(images, function (index, el) {
-    let random = Math.floor(Math.random() * 4) + 1;
+    let random = Math.floor(Math.random() * 2) + 1;
     $(el).addClass("animation");
     if (index == 0 || index == 5) {
       $(el).addClass("fade-slide-left");
