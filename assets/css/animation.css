@@ -1,0 +1,114 @@
+/* 
+* Guys ini animation sebelum makenya tambahin class animation ke setiap element/tag di html
+* truss kalau mau tambah bilang jangan ditambah sendiri supaya strukturnya rapih
+* tambahin kelas animtaion dulu baru nama animation / attribute animationnya kaya delay dan iteration count
+*/
+
+.animation {
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+}
+
+.animation.infinite {
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.animation.delay-2s {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.animation.middle-fast {
+  animation-duration: 0.7s;
+  -webkit-animation-duration: 0.7s;
+}
+
+.animation.middle-slow {
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+}
+
+.animation.slow {
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+
+.animation.supper-slow {
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+}
+
+.animation.zoom {
+  animation-name: zoom;
+}
+
+.animation.float {
+  animation-name: float;
+}
+
+.animation.fadeing {
+  animation-name: fadeing;
+}
+
+.animation.fade-slide-left {
+  animation-name: fadeSlideLeft;
+}
+
+.animation.fade-slide-right {
+  animation-name: fadeSlideRight;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1);
+    width: 1%;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideLeft {
+  0% {
+    opacity: 0;
+    /* translate 3d (x,y,t) */
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
