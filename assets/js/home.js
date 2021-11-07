@@ -2,7 +2,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".splash-screen").fadeOut();
     init();
-  }, 3000);
+  }, 5000);
 });
 
 function init() {
