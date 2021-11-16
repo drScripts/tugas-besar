@@ -2,13 +2,16 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".splash-screen").fadeOut();
     init();
+    setTimeout(function () {
+      setFloatingAnimation();
+    }, 3000);
   }, 5000);
 });
 
 function init() {
   let images = $("img");
   $.each(images, function (index, el) {
-    let random = Math.floor(Math.random() * 2) + 1;
+    let random = Math.floor(Math.random() * 1) + 1;
     $(el).addClass("animation");
     if (index == 0 || index == 5) {
       $(el).addClass("fade-slide-left");
@@ -21,5 +24,17 @@ function init() {
     } else if (index == 4) {
       $(el).addClass("zoom").addClass("fast");
     }
+  });
+}
+
+function setFloatingAnimation() {
+  let images = $("img");
+  $.each(images, function (index, el) {
+    let random = Math.floor(Math.random() * 3) + 2;
+    $(el).removeClass("fade-slide-left fade-slide-right zoom middle-fast fast");
+    $(el)
+      .addClass("float")
+      .addClass("infinite")
+      .css("animation-duration", random + "s");
   });
 }

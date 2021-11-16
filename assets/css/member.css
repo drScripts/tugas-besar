@@ -1,0 +1,55 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: #f0b6ff;
+}
+
+.banner {
+  position: absolute;
+  width: 25%;
+  transform: rotate(20deg);
+  bottom: 3%;
+  left: -1%;
+}
+
+.image img {
+  max-width: 55%;
+  background-color: green;
+}
+
+.container {
+  border: 2px solid black;
+  background: #b2ddc9;
+  box-sizing: content-box;
+  display: flex;
+}
+
+.splash-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0b6ff;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.loader {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 20px solid rgba(196, 196, 196, 0.5);
+  border-top: 20px solid rgb(55, 184, 226);
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

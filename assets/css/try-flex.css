@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  background-color: #f0b6ff;
+  overflow: hidden;
+}
+
+.container {
+  margin: 24px auto;
+  background-color: #b2ddc9;
+  border: 10px solid black;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.container div {
+  margin: 1%;
+}
+
+.container .card-nav {
+  flex: 1;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.container .card-nav > img {
+  margin: 15px;
+  transition: all 0.5s;
+}
+
+.container .card-nav .member {
+  border-radius: 10px;
+}
+
+.container .card-nav .down {
+  transform: rotate(180deg);
+}
+
+.container .card-nav img.small {
+  width: 40px;
+}
+
+.container .card-nav img.pointer {
+  cursor: pointer;
+}
+
+.container .image {
+  flex: 3;
+  display: flex;
+  /* background-image: url("../image/dahyun.png"); */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container .fact {
+  flex: 5;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.container .fact::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container .fact::-webkit-scrollbar {
+  width: 5px;
+  max-height: 20px;
+}
+
+.container .fact::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.container .fact::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(136, 136, 136, 0.905);
+}
+
+.container .nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .nav > li {
+  list-style: none;
+  padding: 0;
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  margin: 25px 0;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.container .nav li:hover {
+  cursor: pointer;
+}
+
+.container .nav li img {
+  width: 35px;
+  height: 35px;
+}
+
+.container .nav > li.active {
+  opacity: 1;
+}
+
+.banner {
+  position: absolute;
+  width: 25%;
+  transform: rotate(15deg);
+  left: -1%;
+  bottom: 4%;
+}

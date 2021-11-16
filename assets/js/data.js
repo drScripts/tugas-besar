@@ -8,7 +8,7 @@ function returndata() {
         zodiak: "Virgo",
         bb: "47 kg ",
         goldar: "A",
-        image:"nayeon.jpg",
+        image: "nayeon.png",
         fakta: [
           "Nayeon memiliki adik perempuan bernama Im Seo-Yeon.",
           "Ketika masih anak-anak, Nayeon mengikuti kontes model anak-anak dan dipilih oleh JYP. Saat itu sang ibu menolak tapi 10 tahun kemudian di tahun 2010 Nayeon secara diam-diam mengikuti audisi JYP dan lolos. ",
@@ -25,7 +25,7 @@ function returndata() {
         zodiak: "Scorpio",
         bb: "50 kg",
         goldar: "O",
-        image: "jeongyeon.jpg",
+        image: "jeongyeon.png",
         fakta: [
           "Jeongyeon lahir di Suwon, Korea Selatan.",
           "Nama lahir Jeongyeon adalah Yoo Kyung Wan. Dia mengubah namanya waktu kelas 3 karena dia diejek karena namanya terdengar seperti nama anak laki-laki.",
@@ -41,7 +41,7 @@ function returndata() {
         zodiak: "Scorpio",
         bb: "48 kg",
         goldar: "A",
-        image:"momo.jpg",
+        image: "momo.png",
         fakta: [
           "Momo lahir di Kyōtanabe, Kyoto, Jepang.",
           "Punya satu kakak perempuan, bernama Hana. (2 tahun lebih tua dari Momo)",
@@ -58,7 +58,7 @@ function returndata() {
         zodiak: "Capricorn",
         bb: "48 kg ",
         goldar: "B",
-        image:"sana.jpg",
+        image: "sana.png",
         fakta: [
           "Sana lahir di Tennōji-ku, Osaka, Jepang.",
           "Anak tunggal.",
@@ -75,7 +75,7 @@ function returndata() {
         zodiak: "Aquarius",
         bb: "56 kg ",
         goldar: "O",
-        image:"jihyo.jpg",
+        image: "jihyo.png",
         fakta: [
           "Jihyo lahir di Guri, Gyeonggi, Korea Selatan.",
           "Punya dua adik perempuan bernama Seoyeon dan Jiyoung.",
@@ -92,7 +92,7 @@ function returndata() {
         zodiak: "Aries",
         bb: "46 kg",
         goldar: "A",
-        image:"mina.jpg",
+        image: "mina.png",
         fakta: [
           "Mina lahir di San Antonio, Texas, Amerika; orang tuanya asli Jepang.",
           "Keluarganya pindah ke Kobe, Jepang, ketika dia masih balita.",
@@ -109,7 +109,7 @@ function returndata() {
         zodiak: "Gemini",
         bb: "48 kg ",
         goldar: "O",
-        image:"dahyun.jpg",
+        image: "dahyun.png",
         fakta: [
           "Dahyun lahir di Seongnam, Gyeonggi, Korea Selatan.",
           "Dahyun punya satu kakak laki-laki bernama Myung Soo.",
@@ -126,7 +126,7 @@ function returndata() {
         zodiak: "Taurus",
         bb: "48 Kg",
         goldar: "B",
-        image:"chaeyoung.jpg",
+        image: "chaeyoung.png",
         fakta: [
           "Chaeyoung lahir di Seoul, Korea Selatan.",
           "Chaeyoung punya satu adik laki-laki bernama Jeong Hun, yang merupakan seorang model.",
@@ -143,7 +143,7 @@ function returndata() {
         zodiak: "Gemini",
         bb: "48 Kg",
         goldar: "A",
-        image:"tzuyu.jpg",
+        image: "tzuyu.png",
         fakta: [
           "Tzuyu lahir di Tainan, Taiwan. ",
           "Tzuyu memiliki kakak laki-laki. ",

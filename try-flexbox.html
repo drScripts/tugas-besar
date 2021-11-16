@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try FlexBox</title>
+    <link rel="stylesheet" href="assets/css/try-flex.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/data.js"></script>
+  </head>
+  <body>
+    <img
+      src="assets/image/home/banner.png"
+      alt=""
+      class="banner animation middle-fast zoom"
+    />
+    <div class="container">
+      <div class="background-icon"></div>
+      <div class="card-nav">
+        <img
+          src="assets/image/icon/icon-arrow.png"
+          width="50"
+          class="pointer"
+        />
+        <img
+          src="assets/image/icon/none-member.png"
+          width="50"
+          class="member small"
+        />
+        <img src="assets/image/home/nayeon.jpg" width="50" class="member" />
+        <img
+          src="assets/image/home/jeongyeon.jpg"
+          width="50"
+          class="member small"
+        />
+        <img
+          src="assets/image/icon/icon-arrow.png"
+          width="50"
+          class="down pointer"
+        />
+      </div>
+      <div id="fact" class="fact">
+        <h1></h1>
+        <div class="facts"></div>
+      </div>
+      <div id="image" class="image animation"></div>
+      <div class="nav">
+        <li class="active">
+          <img src="assets/image/icon/home.png" alt="" />
+        </li>
+        <li>
+          <img src="assets/image/icon/music-player.png" alt="" />
+        </li>
+        <li>
+          <img src="assets/image/icon/forum.png" alt="" />
+        </li>
+
+        <li>
+          <img src="assets/image/icon/about.png" alt="" />
+        </li>
+      </div>
+    </div>
+
+    <script>
+      let intViewPort = window.innerWidth;
+      let intheight = window.innerHeight;
+      let container = document.getElementsByClassName("container")[0];
+      container.setAttribute(
+        "style",
+        "max-width:" +
+          (intViewPort - 57) +
+          "px" +
+          ";height:" +
+          (intheight - 56) +
+          "px"
+      );
+
+      $(".card-nav img")
+        .first()
+        .attr("src", "assets/image/icon/icon-arrow-none.png");
+
+      $(".nav li").click(function () {
+        console.log("hai");
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      const batasScroll = 15;
+      let bawah = 0;
+      let atas = 0;
+      let index = 0;
+      let data = null;
+
+      const getData = () => {
+        data = JSON.parse(returndata()).data;
+      };
+
+      const setData = () => {
+        let fact = $(".container .fact");
+        fact.children("h1").html(data[index].nama);
+        $("#image").addClass("start");
+        $("#image")
+          .css("background-image", `url(assets/image/${data[index].image})`)
+          .addClass("fade-slide-left");
+
+        setTimeout(() => {
+          $("#image").removeClass("fade-slide-left");
+        }, 2000);
+      };
+
+      const init = () => {
+        getData();
+        setData();
+      };
+
+      const resetData = () => {};
+
+      const initChange = () => {
+        resetData();
+      };
+
+      init();
+
+      $("#fact").bind("mousewheel", function (e) {
+        e.stopPropagation();
+      });
+
+      $(document).bind("mousewheel", function (e) {
+        if (e.originalEvent.wheelDelta == 120) {
+          atas++;
+          if (atas >= batasScroll) {
+            if (index != 0) {
+              index--;
+              initChange();
+              setData();
+            }
+            atas = 0;
+          }
+        } else {
+          bawah++;
+          if (bawah >= batasScroll) {
+            if (index != 8) {
+              index++;
+              initChange();
+              setData();
+            }
+            bawah = 0;
+          }
+        }
+        console.log(index);
+      });
+    </script>
+  </body>
+</html>
