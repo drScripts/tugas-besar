@@ -70,7 +70,7 @@
 }
 
 .animation.fade-slide-up {
-  animation-name: fadeSlideDown;
+  animation-name: fadeSlideUp;
 }
 
 @keyframes zoom {

@@ -6,8 +6,8 @@ body {
 
 .container {
   margin: 24px auto;
-  background-color: #b2ddc9;
-  border: 10px solid black;
+  background-color: rgba(178, 221, 201, 0.95);
+  border: 5px solid black;
   box-sizing: border-box;
   display: flex;
 }
@@ -50,7 +50,6 @@ body {
 .container .image {
   flex: 3;
   display: flex;
-  /* background-image: url("../image/dahyun.png"); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -120,4 +119,28 @@ body {
   transform: rotate(15deg);
   left: -1%;
   bottom: 4%;
+}
+
+.background-icon {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  z-index: -999;
+}
+
+.background-icon > img {
+  position: absolute;
+  width: 200px;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: rotating;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

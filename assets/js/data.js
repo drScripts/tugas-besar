@@ -9,6 +9,9 @@ function returndata() {
         bb: "47 kg ",
         goldar: "A",
         image: "nayeon.png",
+        about: `
+        Nayeon merupakan member TWICE yang banyak meraih popularitas di dunia hiburan Korea. Tatapan mata yang tajam serta senyum gigi kelincinya membuat anak pertama dari dua saudara ini semakin dikenal di dunia hiburan. Kemampuan vokal yang luar biasa serta dance energiknya membuat wanita 26 tahun sukses meraih popularitas di dunia. Di awal kariernya, ia sempat dilarang oleh orangtuanya menjadi artis. Hingga ia menunggu 10 tahun untuk memberanikan diri mengikuti audisi tanpa diketahui orangtuanya. Lima tahun menjalani trainee, Nayeon harus menerima kenyataan gagal debut dan kembali menjalani proses trainee dari awal di JYP Entertainment. Ia juga harus mengikuti acara survival demi terpilih untuk debut bersama TWICE
+        `,
         fakta: [
           "Nayeon memiliki adik perempuan bernama Im Seo-Yeon.",
           "Ketika masih anak-anak, Nayeon mengikuti kontes model anak-anak dan dipilih oleh JYP. Saat itu sang ibu menolak tapi 10 tahun kemudian di tahun 2010 Nayeon secara diam-diam mengikuti audisi JYP dan lolos. ",
@@ -26,6 +29,9 @@ function returndata() {
         bb: "50 kg",
         goldar: "O",
         image: "jeongyeon.png",
+        about: `
+        Jeongyeon atau Yoo Jeong Yeon Lahir di Korea Selatan, Tanggal 1 November 1996. Ketika Masih muda Jeongyeon gagal lolos audisi JYP. Dia menjadi trainee setelah lolos audisi terbuka JYP Entertainment yang ke-6 pada tanggal 1 Maret 2010. Jeongyeon diterima di JYP dan SM dihari yang sama, Tapi dia memilih JYP.
+        `,
         fakta: [
           "Jeongyeon lahir di Suwon, Korea Selatan.",
           "Nama lahir Jeongyeon adalah Yoo Kyung Wan. Dia mengubah namanya waktu kelas 3 karena dia diejek karena namanya terdengar seperti nama anak laki-laki.",
@@ -42,6 +48,9 @@ function returndata() {
         bb: "48 kg",
         goldar: "A",
         image: "momo.png",
+        about: `
+        Momo atau Hirai Momo, Lahir di Jepang 9 November 1996. Momo di rekkrut olh JYP Entertainment setelah mereka menyaksikan video dance Momo dan Kakaknya. Momo lolos audisi pada 13 April 2012. Momo tereliminasi di episode 6 SIXTEEN, namun JYP memutuskan untuk menambahkannya sebagai member Twice, karena kemampuan menarinya. Dalam bahasa Jepang Momo berarti Persik.
+        `,
         fakta: [
           "Momo lahir di Kyōtanabe, Kyoto, Jepang.",
           "Punya satu kakak perempuan, bernama Hana. (2 tahun lebih tua dari Momo)",
@@ -59,6 +68,9 @@ function returndata() {
         bb: "48 kg ",
         goldar: "B",
         image: "sana.png",
+        about: `
+        Sana atau Minatozaki Sana Lahir di Jepang 29 Desember 1996. Sana merupakan anak tunggal. Direkrut ketika sedang berbelanja bersama teman-temannya. Sana lolos audisi pada tanggal 13 April 2012. Warna representatifnya adalah ungu. Keahlian Sana adalah kaligrafi. Dia mempelajirnya sewaktu masib SD.
+        `,
         fakta: [
           "Sana lahir di Tennōji-ku, Osaka, Jepang.",
           "Anak tunggal.",
@@ -76,6 +88,9 @@ function returndata() {
         bb: "56 kg ",
         goldar: "O",
         image: "jihyo.png",
+        about: `
+        Jihyo atau Park Ji Soo lahir di Korea 1 Februari 1997. Jihyo memiliki dua adik perempuan bernama Seoyeon dan Jiyoung. Jihyo menjadi trainee JYP sejak kelas 3 SD, setelah dia memenangkan juara kedua di sebuah kontes di junior Naver untuk peran anak.
+        `,
         fakta: [
           "Jihyo lahir di Guri, Gyeonggi, Korea Selatan.",
           "Punya dua adik perempuan bernama Seoyeon dan Jiyoung.",
@@ -93,6 +108,9 @@ function returndata() {
         bb: "46 kg",
         goldar: "A",
         image: "mina.png",
+        about: `
+        Mina atau Myoui Mina lahir di San Antonio, Texas, Amerika 24 maret 1997.  Keluarganya pindah ke Kobe, Jepang, ketika dia masih balita. Nama Inggris Mina adalah Sharon Myoui. Dia bersekolah di Obayashi Sacred Heart school di Jepang. Mina direkrut oleh JYP ketika sedang berbelanja dengan ibunya.
+        `,
         fakta: [
           "Mina lahir di San Antonio, Texas, Amerika; orang tuanya asli Jepang.",
           "Keluarganya pindah ke Kobe, Jepang, ketika dia masih balita.",
@@ -110,6 +128,9 @@ function returndata() {
         bb: "48 kg ",
         goldar: "O",
         image: "dahyun.png",
+        about: `
+        Dahyun atau Kim da Hyun lahir di Korea Selatan 28 Mei 1998. Dahyun sewaktu SMP pernah dance solo diacara youth dance festival dan kemudian direktu oleh JYP Entertainment. Dia lolos audisi pada 7 Juli 2012, dan secara resmi menjadi trainee JYP. Dahyun mengikuti audisi SM, JYP, YG di waktu yang sama. Diterima oleh ketiganya namun dia memilih JYP.
+        `,
         fakta: [
           "Dahyun lahir di Seongnam, Gyeonggi, Korea Selatan.",
           "Dahyun punya satu kakak laki-laki bernama Myung Soo.",
@@ -127,6 +148,9 @@ function returndata() {
         bb: "48 Kg",
         goldar: "B",
         image: "chaeyoung.png",
+        about: `
+        Chaeyoung atau Son Chae young lahir di Korea Selatan 23 April 1999. Chaeyoung lolos audisi pada tanggal 6 Juni 2012. Pendidikan : Hanlim Multi Arts School. Nama Inggris Chaeyoung adalah Katarina.
+        `,
         fakta: [
           "Chaeyoung lahir di Seoul, Korea Selatan.",
           "Chaeyoung punya satu adik laki-laki bernama Jeong Hun, yang merupakan seorang model.",
@@ -144,6 +168,9 @@ function returndata() {
         bb: "48 Kg",
         goldar: "A",
         image: "tzuyu.png",
+        about: `
+        Tzuyu atau Chou Tzuyu lahir di Taiwan 14 Juni 1999. Nama Inggris Tzuyu adalah Sally Chou. Dia ditemukan oleh JYP pada acara MUSE performing Arts Wokrshop di Taiwan tahun 2012, dan pergu ke Korea Selatan pada 15 November untuk memulai masa pelatihannya. Tzuyu tidak direncanakan tampil pada program Sixteen namun dia menggantikan Lena (Traine JYP Sebelumnya)
+        `,
         fakta: [
           "Tzuyu lahir di Tainan, Taiwan. ",
           "Tzuyu memiliki kakak laki-laki. ",
