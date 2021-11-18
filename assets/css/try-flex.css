@@ -124,7 +124,7 @@ body {
 .background-icon {
   position: absolute;
   top: -150px;
-  left: -150px;
+  left: -50px;
   z-index: -999;
 }
 

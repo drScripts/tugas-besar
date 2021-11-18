@@ -1,3 +1,15 @@
+const cardMemberName = [
+  "nayeon.jpg",
+  "jeongyeon.jpg",
+  "momo.jpg",
+  "sana.jpg",
+  "jihyo.jpg",
+  "mina.jpg",
+  "dahyun.jpg",
+  "chaeyoung.jpg",
+  "tzuyu.jpg",
+];
+
 $(".card-nav img").first().attr("src", "assets/image/icon/icon-arrow-none.png");
 
 $(".nav li").click(function () {
@@ -16,23 +28,70 @@ const getData = () => {
   data = JSON.parse(returndata()).data;
 };
 
+const setCardMember = () => {
+  const link = "assets/image/home/";
+
+  let body = $("body");
+  let img = $(".card-nav img.member");
+
+  let bodyDataLast = body.attr("data-last");
+  let bodyDataNow = body.attr("data-now");
+  let bodyDataNext = body.attr("data-next");
+
+  $("img.pointer").attr("disabled", bodyDataLast == -1);
+  $("img.pointer.down").attr("disabled", bodyDataNext == cardMemberName.length);
+
+  let pointer = $("img.pointer");
+  let pointerDown = $("img.pointer.down");
+
+  pointer.attr("disabled") == "disabled"
+    ? pointer.attr("src", "assets/image/icon/icon-arrow-none.png")
+    : pointer.attr("src", "assets/image/icon/icon-arrow.png");
+
+  pointerDown.attr("disabled") == "disabled"
+    ? pointerDown.attr("src", "assets/image/icon/icon-arrow-none.png")
+    : pointerDown.attr("src", "assets/image/icon/icon-arrow.png");
+
+  $(img[0]).attr(
+    "src",
+    bodyDataLast == -1
+      ? "assets/image/icon/none-member.png"
+      : link + cardMemberName[bodyDataLast]
+  );
+
+  $(img[1]).attr("src", link + cardMemberName[bodyDataNow]);
+
+  $(img[2]).attr(
+    "src",
+    bodyDataNext == cardMemberName.length
+      ? "assets/image/icon/none-member.png"
+      : link + cardMemberName[bodyDataNext]
+  );
+};
+
 const setData = () => {
+  $("body")
+    .attr("data-now", index)
+    .attr("data-last", index - 1)
+    .attr("data-next", index + 1);
+
+  setCardMember();
+
   let fact = $(".container .fact");
   fact.children("h1").html(data[index].nama);
+
+  fact.children("");
+  let facts = $(".container .fact .facts");
+  facts
+    .children("p")
+    .html(data[index].about)
+    .addClass("animation fade-slide-right");
+
   $(".container .fact h1").addClass("animation fade-slide-down");
   $("#image").addClass("start");
   $("#image")
     .css("background-image", `url(assets/image/${data[index].image})`)
     .addClass("fade-slide-left");
-
-  fact.children("");
-
-  let facts = $(".container .fact .facts");
-
-  facts
-    .children("p")
-    .html(data[index].about)
-    .addClass("animation fade-slide-right");
 
   $("#funfact").html("");
 
@@ -55,7 +114,7 @@ const setData = () => {
   setTimeout(() => {
     $("#image").removeClass("fade-slide-left");
     $(".container .fact h1").removeClass("fade-slide-down");
-    facts.children("p").removeClass("fade-slide-up");
+    facts.children("p").removeClass("fade-slide-right");
     $("#funfact").removeClass("fade-slide-right");
   }, 4000);
 };
@@ -92,6 +151,24 @@ const init = () => {
   initBackgroundIcon();
   setData();
   initAnimationIconBack();
+
+  $("#up").click(function () {
+    if ($(this).attr("disabled") != "disabled") {
+      index--;
+      atas = 0;
+      bawah = 0;
+      setData();
+    }
+  });
+
+  $("#down").click(function () {
+    if ($(this).attr("disabled") != "disabled") {
+      index++;
+      atas = 0;
+      bawah = 0;
+      setData();
+    }
+  });
 };
 
 function initBackgroundIcon() {

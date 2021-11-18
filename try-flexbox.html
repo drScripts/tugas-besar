@@ -19,11 +19,7 @@
     <div class="background-icon"></div>
     <div class="container">
       <div class="card-nav">
-        <img
-          src="assets/image/icon/icon-arrow.png"
-          width="50"
-          class="pointer"
-        />
+        <img src="" width="50" class="pointer" id="up" />
         <img
           src="assets/image/icon/none-member.png"
           width="50"
@@ -35,11 +31,7 @@
           width="50"
           class="member small"
         />
-        <img
-          src="assets/image/icon/icon-arrow.png"
-          width="50"
-          class="down pointer"
-        />
+        <img src="" width="50" class="down pointer" id="down" />
       </div>
       <div id="fact" class="fact">
         <h1></h1>
@@ -70,21 +62,29 @@
     <script src="assets/js/member.js"></script>
 
     <script>
+      function setWidthContainer() {
+        let intViewPort = window.innerWidth;
+        let intheight = window.innerHeight;
+        let container = document.getElementsByClassName("container")[0];
+        container.setAttribute(
+          "style",
+          "max-width:" +
+            (intViewPort - 57) +
+            "px" +
+            ";height:" +
+            (intheight - 56) +
+            "px"
+        );
+      }
+
       $(document).ready(function () {
         init();
+        setWidthContainer();
+
+        $(window).resize(function () {
+          setWidthContainer();
+        });
       });
-      let intViewPort = window.innerWidth;
-      let intheight = window.innerHeight;
-      let container = document.getElementsByClassName("container")[0];
-      container.setAttribute(
-        "style",
-        "max-width:" +
-          (intViewPort - 57) +
-          "px" +
-          ";height:" +
-          (intheight - 56) +
-          "px"
-      );
     </script>
   </body>
 </html>
