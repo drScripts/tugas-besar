@@ -7,8 +7,8 @@ body {
 .splash-screen {
   width: 100%;
   height: 100vh;
-  background-image: url(../image/loadingGif.gif);
-  background-size: cover;
+  background-image: url(../image/loadingicon.gif);
+  background-size: contain;
   background-position: center;
   position: absolute;
   z-index: 1000;

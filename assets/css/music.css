@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  background-color: #f0b6ff;
+  overflow: hidden;
+}
+
+.container {
+  margin: 24px auto;
+  background-color: rgba(178, 221, 201, 0.95);
+  border: 3px solid black;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.container div {
+  margin: 1%;
+}
+
+.container .content {
+  flex: 10;
+  overflow: scroll;
+}
+
+.container .content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container .content::-webkit-scrollbar {
+  width: 5px;
+  max-height: 20px;
+}
+
+.container .content::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.container .content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(136, 136, 136, 0.905);
+}
+
+.container .nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .nav > li {
+  list-style: none;
+  padding: 20px;
+  background-color: black;
+  display: flex;
+  margin: 25px 0;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.container .nav li:hover {
+  cursor: pointer;
+}
+
+.container .nav li img {
+  width: 35px;
+  height: 35px;
+}
+
+.container .nav > li.active {
+  opacity: 1;
+}
+
+.banner {
+  position: absolute;
+  width: 20%;
+  transform: rotate(15deg);
+  left: -1%;
+  bottom: 4%;
+}
+
+.background-icon {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  z-index: -999;
+}
+
+.background-icon > img {
+  position: absolute;
+  width: 200px;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: rotating;
+}
+
+/* dibawah ini content cssnya */
+
+.header {
+  display: flex;
+}
+
+.header .search-box {
+  background-color: rgb(187, 186, 186);
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.header .link-category {
+  flex: 1;
+  display: flex;
+  font-size: 18px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .search-box input {
+  flex: 15;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  margin: 0 10px;
+}
+
+.header .search-box input:focus {
+  outline: none;
+}
+
+.header .link-category li,
+.header .link-category li a {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+
+.header .search-box img {
+  width: 30px;
+  height: 30px;
+  flex: 1;
+}
+
+.content .body {
+  padding: 10px;
+}
+
+.content .body h1.title {
+  color: white;
+}
+
+.body-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.body-cards .box {
+  width: 25%;
+  background-color: lightgrey;
+  border-radius: 20px;
+  padding: 10px;
+  float: left;
+  margin: 14px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+
+.body-cards .box:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.body-cards .box img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.player-status {
+  display: flex;
+  width: 100%;
+  height: 86px;
+  padding: 14px;
+  position: absolute;
+  background-color: #bf9dc7;
+  bottom: -110px;
+  transition: all 1s;
+}
+
+.player-status .toggle img {
+  width: 50%;
+  transition: all 1s;
+  transform: rotate(180deg);
+}
+
+.player-status .toggle {
+  position: absolute;
+  text-align: center;
+  top: -37%;
+  left: 2px;
+  background-color: inherit;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.player-status .disc-song {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-image: url("../songs/image/candypop.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotating 2s linear infinite;
+  animation-play-state: paused;
+  margin: 0 15px;
+}
+
+.player-status .disc-song .middles {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(67, 67, 67);
+}
+
+.player-status .song-title {
+  font-weight: bold;
+}
+
+.player-status .left {
+  flex: 2;
+  display: flex;
+}
+
+.player-status .middle {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-status .middle .song-controller img {
+  width: 50px;
+}
+
+.song-controller {
+  display: flex;
+  justify-content: center;
+}
+
+.player-status .middle .song-time-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-time-indicator .indicator {
+  flex: 7;
+  background-color: rgba(243, 243, 243, 0.679);
+  height: 20px;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+
+.song-time-indicator .indicator .progress {
+  width: 1%;
+  background-color: rgb(131, 240, 162);
+  height: 20px;
+  border-radius: 20px;
+}
+
+.song-time-indicator p {
+  flex: 1;
+}
+
+#prev {
+  transform: rotate(180deg);
+}
+
+.player-status .right {
+  flex: 2;
+}
+
+#play {
+  margin: 0 20px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try FlexBox</title>
+    <link rel="stylesheet" href="assets/css/music.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/data.js"></script>
+  </head>
+  <body>
+    <img
+      src="assets/image/home/banner.png"
+      alt=""
+      class="banner animation middle-fast zoom"
+    />
+    <div class="background-icon"></div>
+    <div class="container">
+      <div class="content">
+        <div class="header">
+          <div class="search-box">
+            <input type="text" placeholder="Search Song Name" />
+            <img src="assets/image/icon/searchIcon.png" alt="" />
+          </div>
+          <div class="link-category">
+            <li><a href="">Candy Pop</a></li>
+            <li><a href="">Signal</a></li>
+            <li><a href="">Yes or Yes</a></li>
+            <li><a href="">Twicecoaster</a></li>
+          </div>
+        </div>
+        <div class="body">
+          <h1 class="title">All Twice Songs</h1>
+          <div class="body-cards">
+            <div class="box">
+              <img src="assets/songs/image/candypop.jfif" alt="Candy Pop" />
+              <h1>Candy Pop</h1>
+              <p>
+                Candy Pop was the Genyr of color, spirit, fun and amusement and
+                was one of the most skilled Genyrs, being extraordinarily
+                skilled in magic. ... However Night Terrors failed to make Candy
+                Pop part of his cluster of souls as Candy Pop fused directly
+                with Night's own spirit in a feeble attempt to stop him.
+              </p>
+              <audio controls hidden id="cp">
+                <source src="assets/songs/candypop.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img
+                src="assets/songs/image/brandnewgirl.jpg"
+                alt="Brand New Girl"
+              />
+              <h1>Brand New Girl</h1>
+              <p>
+                "BRAND NEW GIRL" is a Japanese song by South Korean girl group
+                Twice. It is the second song from the original Japanese single
+                Candy Pop. The music video for "BRAND NEW GIRL" was released on
+                February 23, 2018.
+              </p>
+              <audio controls hidden id="bng">
+                <source src="assets/songs/brandnewgirl.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+
+            <div class="box">
+              <img src="assets/songs/image/onlyyou.jpg" alt="Only You" />
+              <h1>Only You</h1>
+              <p>
+                "Only You" (Korean: Only 너) is a song recorded by South Korean
+                girl group Twice. It is the third track in the fourth mini-album
+                Signal.
+              </p>
+              <audio controls hidden id="oy">
+                <source src="assets/songs/onlyyou.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img
+                src="assets/songs/image/sayyouloveme.jpg"
+                alt="Say You Love Me"
+              />
+              <h1>Say You Love Me</h1>
+              <p>
+                "Say You Love Me" is a song by South Korean girl group Twice .
+                It is the second track in the group's 6th extended play (EP),
+                Yes Or Yes.
+              </p>
+              <audio controls hidden id="sylm">
+                <source src="assets/songs/sayyouloveme.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/signal.jpg" alt="Signal" />
+              <h1>Signal</h1>
+              <p>
+                "Signal" is a song by South Korean girl group Twice . It is the
+                first and title track in the group's fourth mini-album, Signal.
+                The single and its music video was released on May 15, 2017
+              </p>
+              <audio controls hidden id="sg">
+                <source src="assets/songs/signal.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/yesoryes.jpeg" alt="Yes or Yes" />
+              <h1>Yes or Yes</h1>
+              <p>
+                "YES or YES" is a song recorded by South Korean girl group
+                Twice. It is the first and title track of the extended play, YES
+                or YES. The single and its music video were released on November
+                5, 2018.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/yesoryes.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <li>
+          <img src="assets/image/icon/home.png" alt="" />
+        </li>
+        <li class="active">
+          <img src="assets/image/icon/music-player.png" alt="" />
+        </li>
+        <li>
+          <img src="assets/image/icon/forum.png" alt="" />
+        </li>
+
+        <li>
+          <img src="assets/image/icon/about.png" alt="" />
+        </li>
+      </div>
+    </div>
+    <div class="player-status">
+      <div class="toggle">
+        <img src="assets/songs/image/down.png" alt="Down Toggle" id="arrow" />
+      </div>
+      <div class="left">
+        <div class="disc-song" id="disc">
+          <div class="middles"></div>
+        </div>
+        <div class="song-title">
+          <p id="title">Say You Love Me</p>
+          <p>TWICE</p>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="song-controller">
+          <img src="assets/songs/image/arrow.png" alt="prev" id="prev" />
+          <img
+            src="assets/songs/image/play.png"
+            alt="play"
+            id="play"
+            song-id="0"
+          />
+          <img src="assets/songs/image/arrow.png" alt="next" id="next" />
+        </div>
+        <div class="song-time-indicator">
+          <p class="cur-time" style="text-align: end" id="curent-time">0:00</p>
+          <div class="indicator">
+            <div class="progress" id="progress"></div>
+          </div>
+          <p class="end-time" id="end-time">4:25</p>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".header .link-category a").click(function (e) {
+          e.preventDefault();
+        });
+        setWidthContainer();
+
+        $(window).resize(function () {
+          setWidthContainer();
+        });
+
+        function updateState(title, duration, imgSrc) {
+          let menit = Math.floor(duration / 60);
+          let detik = duration - menit * 60;
+          if (detik.toString().length < 2) {
+            detik = "0" + detik;
+          }
+
+          $("#play")
+            .attr("src", "assets/songs/image/stop.png")
+            .attr("state-stop", false);
+
+          $("#end-time").html(menit + ":" + detik);
+          $(".song-title #title").html(title);
+          $("#disc").css("background-image", `url(${imgSrc})`);
+          $(".disc-song").css("animation-play-state", "running");
+        }
+
+        function animateToggle() {
+          if ($(".player-status").css("bottom") == "-110px") {
+            $(".player-status").animate(
+              {
+                bottom: "0",
+              },
+              500
+            );
+
+            $("#arrow").css("transform", "rotate(0)");
+          } else {
+            $(".player-status").animate(
+              {
+                bottom: "-110px",
+              },
+              500
+            );
+
+            $("#arrow").css("transform", "rotate(180deg)");
+          }
+        }
+
+        $(".player-status .toggle").click(function () {
+          animateToggle();
+        });
+
+        $(".box").click(function () {
+          stopAll();
+
+          let audio = $(this).children("audio").get(0);
+          $("#play").attr("song-id", $(this).index());
+          $(".indicator").attr("song-id", $(this).index());
+          if ($(".player-status").css("display") == "none") {
+            animateToggle();
+          } else {
+            animateToggle();
+            animateToggle();
+          }
+
+          $(".player-status").css("display", "flex");
+          audio.play();
+
+          let title = $(this).children("h1").html();
+          let durations = Math.round(audio.duration);
+          let imgSrc = $(this).children("img").attr("src");
+          updateState(title, durations, imgSrc);
+
+          $(audio).on("ended", function () {
+            $(".disc-song").css("animation-play-state", "paused");
+            $("#play")
+              .attr("src", "assets/songs/image/play.png")
+              .attr("state-stop", true);
+            $(audio).currentTime = 0;
+          });
+
+          $(audio).on("timeupdate", function () {
+            let persenan = (audio.currentTime / durations) * 100;
+            let current = Math.floor(audio.currentTime);
+            let menit = Math.floor(current / 60);
+            let detik = current - menit * 60;
+
+            if (detik.toString().length < 2) {
+              detik = "0" + detik;
+            }
+            $("#progress").css("width", `${persenan}%`);
+            $("#curent-time").html(`${menit}:${detik}`);
+          });
+        });
+
+        $("#next").click(function () {
+          let allEl = $(".box").length;
+          let currId = $("#play").attr("song-id");
+
+          if (parseInt(currId) + 1 != allEl) {
+            animateToggle();
+            stopAll();
+            animateToggle();
+
+            let box = $(".box").get(parseInt(currId) + 1);
+            let audio = $(box).children("audio").get(0);
+            $("#play").attr("song-id", parseInt(currId) + 1);
+
+            $(".player-status").css("display", "flex");
+            audio.play();
+
+            let title = $(box).children("h1").html();
+            let durations = Math.round(audio.duration);
+            let imgSrc = $(box).children("img").attr("src");
+            updateState(title, durations, imgSrc);
+
+            $(audio).on("ended", function () {
+              $(".disc-song").css("animation-play-state", "paused");
+              $("#play")
+                .attr("src", "assets/songs/image/play.png")
+                .attr("state-stop", true);
+              $(audio).currentTime = 0;
+            });
+
+            $(audio).on("timeupdate", function () {
+              let persenan = (audio.currentTime / durations) * 100;
+              let current = Math.floor(audio.currentTime);
+              let menit = Math.floor(current / 60);
+              let detik = current - menit * 60;
+
+              if (detik.toString().length < 2) {
+                detik = "0" + detik;
+              }
+              $("#progress").css("width", `${persenan}%`);
+              $("#curent-time").html(`${menit}:${detik}`);
+            });
+          }
+        });
+
+        $("#prev").click(function () {
+          let allEl = $(".box").length;
+          let currId = $("#play").attr("song-id");
+
+          if (parseInt(currId) - 1 != -1) {
+            animateToggle();
+            stopAll();
+            animateToggle();
+
+            let box = $(".box").get(parseInt(currId) - 1);
+            let audio = $(box).children("audio").get(0);
+            $("#play").attr("song-id", parseInt(currId) - 1);
+
+            $(".player-status").css("display", "flex");
+            audio.play();
+
+            let title = $(box).children("h1").html();
+            let durations = Math.round(audio.duration);
+            let imgSrc = $(box).children("img").attr("src");
+            updateState(title, durations, imgSrc);
+
+            $(audio).on("ended", function () {
+              $(".disc-song").css("animation-play-state", "paused");
+              $("#play")
+                .attr("src", "assets/songs/image/play.png")
+                .attr("state-stop", true);
+              $(audio).currentTime = 0;
+            });
+
+            $(audio).on("timeupdate", function () {
+              let persenan = (audio.currentTime / durations) * 100;
+              let current = Math.floor(audio.currentTime);
+              let menit = Math.floor(current / 60);
+              let detik = current - menit * 60;
+
+              if (detik.toString().length < 2) {
+                detik = "0" + detik;
+              }
+              $("#progress").css("width", `${persenan}%`);
+              $("#curent-time").html(`${menit}:${detik}`);
+            });
+          }
+        });
+      });
+
+      $("#play").click(function () {
+        let id = $(this).attr("song-id");
+        let el = $(".box").get(id);
+        if ($(this).attr("state-stop") == "true") {
+          $(this)
+            .attr("src", "assets/songs/image/stop.png")
+            .attr("state-stop", false);
+          $(el).children("audio").get(0).play();
+          $(".disc-song").css("animation-play-state", "running");
+        } else {
+          $(this)
+            .attr("src", "assets/songs/image/play.png")
+            .attr("state-stop", true);
+          $(el).children("audio").get(0).pause();
+          $(".disc-song").css("animation-play-state", "paused");
+        }
+      });
+
+      function pauseAll() {
+        $(".box").each((i, el) => {
+          $(el).children("audio")[0].pause();
+        });
+        $("#play")
+          .attr("src", "assets/songs/image/play.png")
+          .attr("state-stop", true);
+      }
+
+      function stopAll() {
+        $(".box").each((i, el) => {
+          $(el).children("audio")[0].pause();
+          $(el).children("audio")[0].currentTime = 0;
+        });
+        $("#play")
+          .attr("src", "assets/songs/image/play.png")
+          .attr("state-stop", true);
+      }
+
+      function setWidthContainer() {
+        let intViewPort = window.innerWidth;
+        let intheight = window.innerHeight;
+        let container = document.getElementsByClassName("container")[0];
+        container.setAttribute(
+          "style",
+          "max-width:" +
+            (intViewPort - 57) +
+            "px" +
+            ";height:" +
+            (intheight - 56) +
+            "px"
+        );
+      }
+    </script>
+  </body>
+</html>
