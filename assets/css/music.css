@@ -298,6 +298,25 @@ body {
   .header .link-category {
     font-size: 16px;
   }
+
+  .player-status .disc-song {
+    width: 100px;
+    height: 90px;
+  }
+
+  .player-status .right {
+    flex: 0.5;
+  }
+
+  .player-status .left {
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .player-status {
+    padding: 12px;
+  }
 }
 
 @media screen and (max-width: 688px) {
@@ -326,6 +345,25 @@ body {
   .header .link-category {
     font-size: 18px;
   }
+
+  .player-status .disc-song {
+    width: 100px;
+    height: 70px;
+  }
+
+  .player-status .right {
+    flex: 0.5;
+  }
+
+  .player-status .left {
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .player-status {
+    padding: 12px;
+  }
 }
 
 @media screen and (max-width: 490px) {
@@ -350,6 +388,25 @@ body {
   .container .nav li img {
     width: 35px;
     height: 35px;
+  }
+
+  .player-status .disc-song {
+    width: 80px;
+    height: 50px;
+  }
+
+  .player-status .right {
+    flex: 0.5;
+  }
+
+  .player-status .left {
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .player-status {
+    padding: 12px;
   }
 }
 
