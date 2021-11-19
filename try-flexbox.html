@@ -11,6 +11,7 @@
     <script src="assets/js/data.js"></script>
   </head>
   <body>
+    <div class="splash-screen"></div>
     <img
       src="assets/image/home/banner.png"
       alt=""
@@ -78,7 +79,10 @@
       }
 
       $(document).ready(function () {
-        init();
+        setTimeout(function () {
+          $(".splash-screen").fadeToggle();
+          init();
+        }, 3000);
         setWidthContainer();
 
         $(window).resize(function () {
