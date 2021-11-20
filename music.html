@@ -144,39 +144,43 @@
         </li>
       </div>
     </div>
-    <div class="player-status">
+    <div class="containing">
       <div class="toggle">
         <img src="assets/songs/image/down.png" alt="Down Toggle" id="arrow" />
       </div>
-      <div class="left">
-        <div class="disc-song" id="disc">
-          <div class="middles"></div>
-        </div>
-        <div class="song-title">
-          <p id="title">Candy Pop</p>
-          <p>TWICE</p>
-        </div>
-      </div>
-      <div class="middle">
-        <div class="song-controller">
-          <img src="assets/songs/image/arrow.png" alt="prev" id="prev" />
-          <img
-            src="assets/songs/image/play.png"
-            alt="play"
-            id="play"
-            song-id="0"
-          />
-          <img src="assets/songs/image/arrow.png" alt="next" id="next" />
-        </div>
-        <div class="song-time-indicator">
-          <p class="cur-time" style="text-align: end" id="curent-time">0:00</p>
-          <div class="indicator">
-            <div class="progress" id="progress"></div>
+      <div class="player-status">
+        <div class="left">
+          <div class="disc-song" id="disc">
+            <div class="middles"></div>
           </div>
-          <p class="end-time" id="end-time">4:25</p>
+          <div class="song-title">
+            <p id="title">Candy Pop</p>
+            <p>TWICE</p>
+          </div>
         </div>
+        <div class="middle">
+          <div class="song-controller">
+            <img src="assets/songs/image/arrow.png" alt="prev" id="prev" />
+            <img
+              src="assets/songs/image/play.png"
+              alt="play"
+              id="play"
+              song-id="0"
+            />
+            <img src="assets/songs/image/arrow.png" alt="next" id="next" />
+          </div>
+          <div class="song-time-indicator">
+            <p class="cur-time" style="text-align: end" id="curent-time">
+              0:00
+            </p>
+            <div class="indicator">
+              <div class="progress" id="progress"></div>
+            </div>
+            <p class="end-time" id="end-time">4:25</p>
+          </div>
+        </div>
+        <div class="right"></div>
       </div>
-      <div class="right"></div>
     </div>
     <script>
       function getRandomPost() {
@@ -249,30 +253,8 @@
           $(".disc-song").css("animation-play-state", "running");
         }
 
-        function animateToggle() {
-          if ($(".player-status").css("bottom") == "-110px") {
-            $(".player-status").animate(
-              {
-                bottom: "0",
-              },
-              500
-            );
-
-            $("#arrow").css("transform", "rotate(0)");
-          } else {
-            $(".player-status").animate(
-              {
-                bottom: "-110px",
-              },
-              500
-            );
-
-            $("#arrow").css("transform", "rotate(180deg)");
-          }
-        }
-
-        $(".player-status .toggle").click(function () {
-          animateToggle();
+        $(".containing .toggle").click(function () {
+          $(".player-status").slideToggle(1000);
         });
 
         $(".box").click(function () {
@@ -282,9 +264,10 @@
           $("#play").attr("song-id", $(this).index());
           $(".indicator").attr("song-id", $(this).index());
 
-          $(".player-status").slideToggle();
+          if ($(".player-status").css("display") == "none") {
+            $(".player-status").slideToggle(); 
+          }
 
-          $(".player-status").css("display", "flex");
           audio.play();
 
           let title = $(this).children("h1").html();
