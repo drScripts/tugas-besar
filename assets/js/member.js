@@ -13,7 +13,6 @@ const cardMemberName = [
 $(".card-nav img").first().attr("src", "assets/image/icon/icon-arrow-none.png");
 
 $(".nav li").click(function () {
-  console.log("hai");
   $(".nav li").removeClass("active");
   $(this).addClass("active");
 });
@@ -119,38 +118,9 @@ const setData = () => {
   }, 4000);
 };
 
-function getRandomPost() {
-  // getting height and width
-  let height = $(window).height() + 150;
-  let width = $(window).width() + 150;
-
-  let rh = Math.floor(Math.random() * height);
-  let rw = Math.floor(Math.random() * width);
-  return [rh, rw];
-}
-
-const initAnimationIconBack = () => {
-  $(".background-icon img").each((i, el) => {
-    let randPostarr = getRandomPost();
-    let randMs = Math.floor(Math.random() * 4 + 4) * 1000;
-    $(el).animate(
-      {
-        top: `${randPostarr[0]}px`,
-        left: `${randPostarr[1]}px`,
-      },
-      randMs,
-      function () {
-        initAnimationIconBack();
-      }
-    );
-  });
-};
-
 const init = () => {
   getData();
-  initBackgroundIcon();
   setData();
-  initAnimationIconBack();
 
   $("#up").click(function () {
     if ($(this).attr("disabled") != "disabled") {
@@ -170,20 +140,6 @@ const init = () => {
     }
   });
 };
-
-function initBackgroundIcon() {
-  for (let i = 0; i < 2; i++) {
-    $(".background-icon").append(`
-          <img src="assets/image/random-image/icon1.png" alt="" />
-          <img src="assets/image/random-image/icon2.png" alt="" />
-          <img src="assets/image/random-image/icon3.png" alt="" />
-          <img src="assets/image/random-image/icon4.png" alt="" />
-          <img src="assets/image/random-image/icon5.png" alt="" />
-          <img src="assets/image/random-image/icon6.png" alt="" />
-          <img src="assets/image/random-image/icon7.png" alt="" />
-          `);
-  }
-}
 
 $("#fact").bind("mousewheel", function (e) {
   e.stopPropagation();

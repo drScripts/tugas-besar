@@ -7,6 +7,7 @@
     <title>Try FlexBox</title>
     <link rel="stylesheet" href="assets/css/member.css" />
     <link rel="stylesheet" href="assets/css/animation.css" />
+    <link rel="stylesheet" href="assets/css/all-page.css" />
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/data.js"></script>
   </head>
@@ -63,33 +64,16 @@
     </div>
 
     <script src="assets/js/member.js"></script>
-
+    <script src="assets/js/all-page.js"></script>
     <script>
-      function setWidthContainer() {
-        let intViewPort = window.innerWidth;
-        let intheight = window.innerHeight;
-        let container = document.getElementsByClassName("container")[0];
-        container.setAttribute(
-          "style",
-          "max-width:" +
-            (intViewPort - 57) +
-            "px" +
-            ";height:" +
-            (intheight - 56) +
-            "px"
-        );
-      }
-
       $(document).ready(function () {
         setTimeout(function () {
           $(".splash-screen").fadeToggle();
           init();
+          initBackgroundIcon();
+          initAnimationIconBack();
         }, 3000);
         setWidthContainer();
-
-        $(window).resize(function () {
-          setWidthContainer();
-        });
       });
     </script>
   </body>

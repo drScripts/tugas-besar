@@ -7,11 +7,11 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/animation.css" />
+    <link rel="stylesheet" href="assets/css/all-page.css" />
   </head>
   <body>
-    <div class="splash-screen">
-      <div class="loader"></div>
-    </div>
+    <div class="splash-screen"></div>
+    <div class="background-icon"></div>
     <div class="content">
       <img src="assets/image/home/chaeyoung.jpg" />
       <img src="assets/image/home/sana.jpg" class="oval" />
@@ -23,11 +23,23 @@
       <img src="assets/image/home/momo.jpg" class="oval" />
       <img src="assets/image/home/jeongyeon.jpg" />
       <img src="assets/image/home/banner.png" alt="" />
-      <a href="member.html">
-        <h1>Start Journey</h1>
-      </a>
+      <div class="footer">
+        <a href="./member.html">
+          <h1>Start Journey</h1>
+        </a>
+      </div>
     </div>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/all-page.js"></script>
+
+    <script>
+      setTimeout(function () {
+        $(".splash-screen").fadeToggle();
+        initBackgroundIcon();
+        initAnimationIconBack();
+        setWidthContainer();
+      }, 3000);
+    </script>
   </body>
 </html>

@@ -7,10 +7,12 @@
     <title>Try FlexBox</title>
     <link rel="stylesheet" href="assets/css/music.css" />
     <link rel="stylesheet" href="assets/css/animation.css" />
+    <link rel="stylesheet" href="assets/css/all-page.css" />
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/data.js"></script>
   </head>
   <body>
+    <div class="splash-screen"></div>
     <img
       src="assets/image/home/banner.png"
       alt=""
@@ -182,257 +184,18 @@
         <div class="right"></div>
       </div>
     </div>
+
+    <script src="assets/js/all-page.js"></script>
+    <script src="assets/js/music.js"></script>
     <script>
-      function getRandomPost() {
-        // getting height and width
-        let height = $(window).height() + 150;
-        let width = $(window).width() + 150;
-
-        let rh = Math.floor(Math.random() * height);
-        let rw = Math.floor(Math.random() * width);
-        return [rh, rw];
-      }
-      const initAnimationIconBack = () => {
-        $(".background-icon img").each((i, el) => {
-          let randPostarr = getRandomPost();
-          let randMs = Math.floor(Math.random() * 4 + 4) * 1000;
-          $(el).animate(
-            {
-              top: `${randPostarr[0]}px`,
-              left: `${randPostarr[1]}px`,
-            },
-            randMs,
-            function () {
-              initAnimationIconBack();
-            }
-          );
-        });
-      };
-
-      function initBackgroundIcon() {
-        for (let i = 0; i < 2; i++) {
-          $(".background-icon").append(`
-          <img src="assets/image/random-image/icon1.png" alt="" />
-          <img src="assets/image/random-image/icon2.png" alt="" />
-          <img src="assets/image/random-image/icon3.png" alt="" />
-          <img src="assets/image/random-image/icon4.png" alt="" />
-          <img src="assets/image/random-image/icon5.png" alt="" />
-          <img src="assets/image/random-image/icon6.png" alt="" />
-          <img src="assets/image/random-image/icon7.png" alt="" />
-          `);
-        }
-      }
-
       $(document).ready(function () {
-        initBackgroundIcon();
-        initAnimationIconBack();
-
-        $(".header .link-category a").click(function (e) {
-          e.preventDefault();
-        });
-        setWidthContainer();
-
-        $(window).resize(function () {
+        setTimeout(function () {
+          $(".splash-screen").fadeToggle();
+          initBackgroundIcon();
+          initAnimationIconBack();
           setWidthContainer();
-        });
-
-        function updateState(title, duration, imgSrc) {
-          let menit = Math.floor(duration / 60);
-          let detik = duration - menit * 60;
-          if (detik.toString().length < 2) {
-            detik = "0" + detik;
-          }
-
-          $("#play")
-            .attr("src", "assets/songs/image/stop.png")
-            .attr("state-stop", false);
-
-          $("#end-time").html(menit + ":" + detik);
-          $(".song-title #title").html(title);
-          $("#disc").css("background-image", `url(${imgSrc})`);
-          $(".disc-song").css("animation-play-state", "running");
-        }
-
-        $(".containing .toggle").click(function () {
-          $(".player-status").slideToggle(1000);
-        });
-
-        $(".box").click(function () {
-          stopAll();
-
-          let audio = $(this).children("audio").get(0);
-          $("#play").attr("song-id", $(this).index());
-          $(".indicator").attr("song-id", $(this).index());
-
-          if ($(".player-status").css("display") == "none") {
-            $(".player-status").slideToggle(); 
-          }
-
-          audio.play();
-
-          let title = $(this).children("h1").html();
-          let durations = Math.round(audio.duration);
-          let imgSrc = $(this).children("img").attr("src");
-          updateState(title, durations, imgSrc);
-
-          $(audio).on("ended", function () {
-            $(".disc-song").css("animation-play-state", "paused");
-            $("#play")
-              .attr("src", "assets/songs/image/play.png")
-              .attr("state-stop", true);
-            $(audio).currentTime = 0;
-          });
-
-          $(audio).on("timeupdate", function () {
-            let persenan = (audio.currentTime / durations) * 100;
-            let current = Math.floor(audio.currentTime);
-            let menit = Math.floor(current / 60);
-            let detik = current - menit * 60;
-
-            if (detik.toString().length < 2) {
-              detik = "0" + detik;
-            }
-            $("#progress").css("width", `${persenan}%`);
-            $("#curent-time").html(`${menit}:${detik}`);
-          });
-        });
-
-        $("#next").click(function () {
-          let allEl = $(".box").length;
-          let currId = $("#play").attr("song-id");
-
-          if (parseInt(currId) + 1 != allEl) {
-            stopAll();
-
-            let box = $(".box").get(parseInt(currId) + 1);
-            let audio = $(box).children("audio").get(0);
-            $("#play").attr("song-id", parseInt(currId) + 1);
-
-            $(".player-status").css("display", "flex");
-            audio.play();
-
-            let title = $(box).children("h1").html();
-            let durations = Math.round(audio.duration);
-            let imgSrc = $(box).children("img").attr("src");
-            updateState(title, durations, imgSrc);
-
-            $(audio).on("ended", function () {
-              $(".disc-song").css("animation-play-state", "paused");
-              $("#play")
-                .attr("src", "assets/songs/image/play.png")
-                .attr("state-stop", true);
-              $(audio).currentTime = 0;
-            });
-
-            $(audio).on("timeupdate", function () {
-              let persenan = (audio.currentTime / durations) * 100;
-              let current = Math.floor(audio.currentTime);
-              let menit = Math.floor(current / 60);
-              let detik = current - menit * 60;
-
-              if (detik.toString().length < 2) {
-                detik = "0" + detik;
-              }
-              $("#progress").css("width", `${persenan}%`);
-              $("#curent-time").html(`${menit}:${detik}`);
-            });
-          }
-        });
-
-        $("#prev").click(function () {
-          let allEl = $(".box").length;
-          let currId = $("#play").attr("song-id");
-
-          if (parseInt(currId) - 1 != -1) {
-            stopAll();
-
-            let box = $(".box").get(parseInt(currId) - 1);
-            let audio = $(box).children("audio").get(0);
-            $("#play").attr("song-id", parseInt(currId) - 1);
-
-            $(".player-status").css("display", "flex");
-            audio.play();
-
-            let title = $(box).children("h1").html();
-            let durations = Math.round(audio.duration);
-            let imgSrc = $(box).children("img").attr("src");
-            updateState(title, durations, imgSrc);
-
-            $(audio).on("ended", function () {
-              $(".disc-song").css("animation-play-state", "paused");
-              $("#play")
-                .attr("src", "assets/songs/image/play.png")
-                .attr("state-stop", true);
-              $(audio).currentTime = 0;
-            });
-
-            $(audio).on("timeupdate", function () {
-              let persenan = (audio.currentTime / durations) * 100;
-              let current = Math.floor(audio.currentTime);
-              let menit = Math.floor(current / 60);
-              let detik = current - menit * 60;
-
-              if (detik.toString().length < 2) {
-                detik = "0" + detik;
-              }
-              $("#progress").css("width", `${persenan}%`);
-              $("#curent-time").html(`${menit}:${detik}`);
-            });
-          }
-        });
+        }, 3000);
       });
-
-      $("#play").click(function () {
-        let id = $(this).attr("song-id");
-        let el = $(".box").get(id);
-        if ($(this).attr("state-stop") == "true") {
-          $(this)
-            .attr("src", "assets/songs/image/stop.png")
-            .attr("state-stop", false);
-          $(el).children("audio").get(0).play();
-          $(".disc-song").css("animation-play-state", "running");
-        } else {
-          $(this)
-            .attr("src", "assets/songs/image/play.png")
-            .attr("state-stop", true);
-          $(el).children("audio").get(0).pause();
-          $(".disc-song").css("animation-play-state", "paused");
-        }
-      });
-
-      function pauseAll() {
-        $(".box").each((i, el) => {
-          $(el).children("audio")[0].pause();
-        });
-        $("#play")
-          .attr("src", "assets/songs/image/play.png")
-          .attr("state-stop", true);
-      }
-
-      function stopAll() {
-        $(".box").each((i, el) => {
-          $(el).children("audio")[0].pause();
-          $(el).children("audio")[0].currentTime = 0;
-        });
-        $("#play")
-          .attr("src", "assets/songs/image/play.png")
-          .attr("state-stop", true);
-      }
-
-      function setWidthContainer() {
-        let intViewPort = window.innerWidth;
-        let intheight = window.innerHeight;
-        let container = document.getElementsByClassName("container")[0];
-        container.setAttribute(
-          "style",
-          "max-width:" +
-            (intViewPort - 57) +
-            "px" +
-            ";height:" +
-            (intheight - 56) +
-            "px"
-        );
-      }
     </script>
   </body>
 </html>

@@ -103,41 +103,15 @@ img:nth-child(10) {
   clip-path: ellipse(50% 50% at 50% 50%);
 }
 
-a {
+.footer {
   position: absolute;
-  left: 4%;
-  text-decoration: none;
-  color: black;
-  bottom: 5%;
-}
-
-.splash-screen {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #f0b6ff;
+  width: 100%;
   justify-content: center;
-  align-items: center;
-  display: grid;
-  z-index: 11;
+  display: flex;
+  bottom: 20px;
 }
 
-.loader {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 20px solid rgba(196, 196, 196, 0.5);
-  border-top: 20px solid rgb(55, 184, 226);
-  animation-name: loading;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.footer a {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
 }
