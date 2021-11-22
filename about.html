@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiwce Fanbase | Home Page</title>
+    <title>Twice Fanbase | Forum Page</title>
     <link rel="stylesheet" href="assets/css/all-page.css" />
-    <link rel="stylesheet" href="assets/css/member.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
     <link rel="stylesheet" href="assets/css/animation.css" />
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/data.js"></script>
@@ -20,70 +20,40 @@
     />
     <div class="background-icon"></div>
     <div class="container">
-      <div class="card-nav">
-        <img src="" width="50" class="pointer" id="up" />
-        <img
-          src="assets/image/icon/none-member.png"
-          width="50"
-          class="member small"
-        />
-        <img src="assets/image/home/nayeon.jpg" width="50" class="member" />
-        <img
-          src="assets/image/home/jeongyeon.jpg"
-          width="50"
-          class="member small"
-        />
-        <img src="" width="50" class="down pointer" id="down" />
-      </div>
-      <div id="fact" class="fact">
-        <h1></h1>
-        <div class="facts">
-          <p></p>
-          <h1>Fun Facts</h1>
-          <ol id="funfact"></ol>
-        </div>
-      </div>
-      <div id="image" class="image animation"></div>
+      <div class="content"></div>
       <div class="nav">
-        <li class="active">
-          <a href="#">
+        <li>
+          <a href="./member.html">
             <img src="assets/image/icon/home.png" alt="" />
           </a>
         </li>
         <li>
           <a href="./music.html">
-            <img src="assets/image/icon/music-player.png" alt="" />
-          </a>
+            <img src="assets/image/icon/music-player.png" alt=""
+          /></a>
         </li>
         <li>
           <a href="./forum.html">
             <img src="assets/image/icon/forum.png" alt="" />
           </a>
         </li>
-        <li>
-          <a href="./about.html">
-            <img src="assets/image/icon/about.png" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="./about.html">
+        <li class="active">
+          <a href="#">
             <img src="assets/image/icon/about.png" alt="" />
           </a>
         </li>
       </div>
     </div>
 
-    <script src="assets/js/member.js"></script>
     <script src="assets/js/all-page.js"></script>
     <script>
       $(document).ready(function () {
         setTimeout(function () {
           $(".splash-screen").fadeToggle();
-          init();
           initBackgroundIcon();
           initAnimationIconBack();
+          setWidthContainer();
         }, 3000);
-        setWidthContainer();
       });
     </script>
   </body>

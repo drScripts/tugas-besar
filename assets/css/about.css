@@ -1,0 +1,5 @@
+.container .content {
+  flex: 10;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
