@@ -36,7 +36,6 @@ h1 {
 
 .subforum-kolom1 {
   padding: 10px;
-  height: 500px;
   border-radius: 5px;
   background-color: #f5ccff;
   border-right: 2px solid #f0b6ff;
@@ -45,7 +44,6 @@ h1 {
 .subforum-kolom2 {
   padding: 5px;
   padding-left: 10px;
-  height: 500px;
   border-radius: 5px;
   flex: 10;
   background-color: #f5ccff;
@@ -83,4 +81,8 @@ h1 {
 
 a:hover {
   color: rgb(27, 204, 27);
+}
+
+.subforum-kolom2 img {
+  border-radius: 5px;
 }

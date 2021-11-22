@@ -3,3 +3,29 @@
   overflow-x: scroll;
   overflow-y: scroll;
 }
+
+.content h1 {
+  text-align: center;
+}
+
+.content .box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.content .body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.content .body h3,
+li {
+  text-align: start;
+}
+
+.content .body .box {
+  width: 35%;
+}

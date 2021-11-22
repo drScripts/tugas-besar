@@ -1,0 +1,118 @@
+.container .content {
+  flex: 10;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+/*Ray Jo*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: beige;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f0b6ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 0px rgb(255, 132, 214);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12 px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown li a:hover .dropdown-content {
+  display: block;
+}
+
+.logoAndInfo {
+  background-color: #f1f1f1;
+  margin: 0px;
+}
+
+.logo {
+  border: 1px solid;
+}
+
+.info {
+  border: 1px solid;
+}
+
+.info.header {
+  text-align: center;
+  background-color: beige;
+}
+
+.membersTwiceRight {
+  padding-left: 64px;
+}
+
+.facebook a {
+  background: url("../image/social.jpg")-0px -3px;
+}
+
+.twitter a {
+  background: url("../image/social.jpg")-64px -3px;
+}
+
+.youtube a {
+  background: url("../image/social.jpg")-510px -3px;
+}
+
+.facebook a:hover {
+  background: url("../image/social.jpg")-0px -66px;
+}
+
+.twitter a:hover {
+  background: url("../image/social.jpg")-64px -66px;
+}
+
+.youtube a:hover {
+  background: url("../image/social.jpg")-510px -66px;
+}
+
+ul.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.menu li a {
+  height: 25px;
+  line-height: 50px;
+  padding-left: 60px;
+}
