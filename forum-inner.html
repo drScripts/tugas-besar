@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twice Fanbase | Forum About</title>
+    <link rel="stylesheet" href="assets/css/all-page.css" />
+    <link rel="stylesheet" href="assets/css/inner-forum.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/data.js"></script>
+  </head>
+  <body>
+    <div class="splash-screen"></div>
+    <img
+      src="assets/image/home/banner.png"
+      alt=""
+      class="banner animation middle-fast zoom"
+    />
+    <div class="background-icon"></div>
+    <div class="container">
+      <div class="content">
+        <div class="subforum">
+          <div class="subforum-judul">
+            <h1>&nbsp;New Songs</h1>
+          </div>
+          <div class="subforum-baris">
+            <div class="subforum-icon subforum-kolom1">
+              <i class="tw-logo centers"><img src="assets/image/logo.png" /></i>
+              <p>
+                Posted by: <b>[*enter name]</b><br />
+                Joined : Oct 29, 2018<br />
+              </p>
+            </div>
+            <div class="subforum-kolom2">
+              <h1><i>Nov 20, 2021</i></h1>
+              <hr />
+              <p>Twice Content Goes Here</p>
+            </div>
+          </div>
+          <div class="subforum-bawah center">
+            <span>Not open for further replies.</span>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <li>
+          <a href="./member.html">
+            <img src="assets/image/icon/home.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="./music.html">
+            <img src="assets/image/icon/music-player.png" alt=""
+          /></a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <img src="assets/image/icon/forum.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/image/icon/about.png" alt="" />
+          </a>
+        </li>
+      </div>
+    </div>
+
+    <script src="assets/js/all-page.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".splash-screen").fadeToggle();
+          initBackgroundIcon();
+          initAnimationIconBack();
+          setWidthContainer();
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

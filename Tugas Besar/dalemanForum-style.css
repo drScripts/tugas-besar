@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    color: red;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #f0b6ff;
+    color: black;
+}
+
+a {
+    color: rgb(200, 37, 37);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.container {
+    margin: 20px;
+    padding: 14px;
+}
+
+.subforum {
+    margin-top: 20px;
+}
+
+.subforum-judul {
+    background-color: #f5ccff;
+    padding: 5px;
+    border-radius: 5px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+.subforum-baris {
+    display: flex;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-kolom1 {
+    padding: 10px;
+    margin-left: 15%;
+    width: 10%;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #f5ccff;
+    border-right: 2px solid #f0b6ff;
+}
+
+.subforum-kolom2 {
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 0px;
+    width: 60%;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #f5ccff;
+}
+
+.subforum-bawah {
+    padding: 10px;
+    margin: auto;
+    margin-top: 5px;
+    text-align: left;
+    width: 70%;
+    border-radius: 5px;
+    background-color: #f5ccff;
+    border-left: 5px solid red;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon {
+    font-size: 20px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+a:hover {
+    color: rgb(27, 204, 27);
+}

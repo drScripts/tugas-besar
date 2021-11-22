@@ -258,6 +258,7 @@
     width: 35px;
     height: 35px;
   }
+
   .header .link-category {
     font-size: 18px;
   }
@@ -299,7 +300,7 @@
   }
 
   .container .nav > li {
-    padding: 10px;
+    padding: 5px;
     background-color: black;
     border-radius: 15%;
     margin: 2% 0;

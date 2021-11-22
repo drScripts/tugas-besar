@@ -1,0 +1,86 @@
+.container .content {
+  flex: 10;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+a {
+  color: rgb(200, 37, 37);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.subforum {
+  margin-top: 20px;
+}
+
+.subforum-judul {
+  background-color: #f5ccff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.subforum-baris {
+  display: flex;
+}
+
+.subforum-kolom1 {
+  padding: 10px;
+  height: 500px;
+  border-radius: 5px;
+  background-color: #f5ccff;
+  border-right: 2px solid #f0b6ff;
+}
+
+.subforum-kolom2 {
+  padding: 5px;
+  padding-left: 10px;
+  height: 500px;
+  border-radius: 5px;
+  flex: 10;
+  background-color: #f5ccff;
+}
+
+.subforum-bawah {
+  padding: 10px;
+  margin-top: 5px;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #f5ccff;
+  border-left: 5px solid red;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subforum-icon {
+  font-size: 20px;
+}
+
+.tw-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+a:hover {
+  color: rgb(27, 204, 27);
+}

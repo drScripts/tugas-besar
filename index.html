@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Tiwce Fanbase</title>
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/animation.css" />
     <link rel="stylesheet" href="assets/css/all-page.css" />
@@ -34,11 +34,24 @@
     <script src="assets/js/all-page.js"></script>
 
     <script>
+      const bgname = ["concert-1.jpg", "concert-2.jpg", "concert-3.jpg"];
+      function sliderBackground() {
+        setInterval(() => {
+          let rand = Math.floor(Math.random() * 3);
+          console.log("hai");
+          $("body").css("background-image", "");
+          $("body").css(
+            "background-image",
+            `url('assets/image/${bgname[rand]}')`
+          );
+        }, 5000);
+      }
+
       setTimeout(function () {
         $(".splash-screen").fadeToggle();
         initBackgroundIcon();
         initAnimationIconBack();
-        setWidthContainer();
+        sliderBackground();
       }, 3000);
     </script>
   </body>
