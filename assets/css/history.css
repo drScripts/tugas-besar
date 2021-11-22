@@ -116,3 +116,57 @@ ul.menu li a {
   line-height: 50px;
   padding-left: 60px;
 }
+
+@media screen and (max-width: 688px) {
+  .body-cards .box {
+    width: 69%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .link-category {
+    margin-top: 20px;
+  }
+
+  .container .nav > li {
+    padding: 10px;
+    margin: 25px 0;
+  }
+
+  .container .nav li img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .body-cards .box {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .nav {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .container .nav > li {
+    padding: 5px;
+    background-color: black;
+    border-radius: 15%;
+    margin: 2% 0;
+  }
+
+  .container .nav li img {
+    width: 35px;
+    height: 35px;
+  }
+}
