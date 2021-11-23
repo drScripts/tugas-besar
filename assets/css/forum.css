@@ -69,8 +69,7 @@ a:hover {
     margin-top: 20px;
   }
 
-  .container .nav > li {
-    padding: 10px;
+  .container .nav li a {
     margin: 25px 0;
   }
 
@@ -96,11 +95,8 @@ a:hover {
     justify-content: space-around;
   }
 
-  .container .nav > li {
-    padding: 5px;
-    background-color: black;
+  .container .nav li a {
     border-radius: 15%;
-    margin: 2% 0;
   }
 
   .container .nav li img {
