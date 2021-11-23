@@ -44,7 +44,7 @@ $(document).ready(function () {
     if (detik.toString().length < 2) {
       detik = "0" + detik;
     }
-
+    console.log(imgSrc);
     $("#play")
       .attr("src", "assets/songs/image/stop.png")
       .attr("state-stop", false);
@@ -69,6 +69,7 @@ $(document).ready(function () {
 
     if ($(".player-status").css("display") == "none") {
       $(".player-status").slideToggle();
+      $(".player-status").css("display", "flex");
     }
 
     audio.play();

@@ -25,7 +25,11 @@
       <div class="content">
         <div class="header">
           <div class="search-box">
-            <input type="text" placeholder="Search Song Name" />
+            <input
+              type="text"
+              placeholder="Search Song Name"
+              id="search-input"
+            />
             <img src="assets/image/icon/searchIcon.png" alt="" />
           </div>
           <div class="gap"></div>
@@ -122,6 +126,93 @@
                 Your browser does not support the audio element.
               </audio>
             </div>
+            <div class="box">
+              <img
+                src="assets/songs/image/dtna.jfif"
+                alt="Dance The Night Away"
+              />
+              <h1>Dance The Night Away</h1>
+              <p>
+                "Dance The Night Away" is a song recorded by South Korean girl
+                group Twice. The single and its music video were released on
+                July 9, 2018. The music video was filmed off the coast of
+                Okinawa, Japan.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/dtna.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/fancy.jpg" alt="Fancy You" />
+              <h1>Fancy You</h1>
+              <p>
+                Fancy You is the seventh extended play (EP) by South Korean girl
+                group Twice. The EP, along with the title track "Fancy", was
+                released on April 22, 2019.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/fancy.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img
+                src="assets/songs/image/feelspecial.jfif"
+                alt="Feel Special"
+              />
+              <h1>Feel Special</h1>
+              <p>
+                "Feel Special" is a song recorded by South Korean girl group
+                Twice. It is the title track of the extended play of the same
+                name. The single and its music video were released on September
+                23, 2019.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/feelspecial.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/likey.jfif" alt="Likey" />
+              <h1>Likey</h1>
+              <p>
+                "Likey" is the title track from the first full album
+                "Twicetagram", by South Korean girl group Twice. The music video
+                and single were released on October 30, 2017 and the album was
+                released on November 1, 2017.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/likey.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/Melting.jpg" alt="Melting" />
+              <h1>Melting</h1>
+              <p>
+                "Melting" (Korean:녹아요) is a song by South Korean girl group
+                Twice. The song was released on February 20, 2017. This is the
+                second song in the album Twicecoaster: Lane 2.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/melting.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+            <div class="box">
+              <img src="assets/songs/image/Scientist.jfif" alt="Scientist" />
+              <h1>Scientist</h1>
+              <p>
+                Scientist (stylized as SCIENTIST) is the title track of TWICE's
+                3rd full album, "Formula of Love". The title track and music
+                video were released on November 12, 2021.
+              </p>
+              <audio controls hidden id="yoy">
+                <source src="assets/songs/scientist.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           </div>
         </div>
       </div>
@@ -201,6 +292,33 @@
           initBackgroundIcon();
           initAnimationIconBack();
           setWidthContainer();
+
+          const defaultBody = $(".body-cards").children(".box");
+          let arr = [];
+          $("#search-input").keyup(function () {
+            $(".body-cards").html("");
+            let val = $(this).val();
+
+            if (val != "") {
+              defaultBody.toArray().map((el, index) => {
+                let title = $(el).children("h1").html();
+                if (
+                  title.toLocaleLowerCase().includes(val.toLocaleLowerCase())
+                ) {
+                  arr.push(el);
+                }
+                $(".body-cards").html(arr.concat(" "));
+              });
+            } else {
+              console.log("test");
+              $(".body-cards").html("");
+              console.log($(".body-cards").html(""));
+              defaultBody.toArray().forEach((el, i) => {
+                $(".body-cards").append(el);
+              });
+            }
+            arr = [];
+          });
         }, 3000);
       });
     </script>

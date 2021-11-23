@@ -44,10 +44,10 @@ li {
     margin-top: 20px;
   }
 
-  .container .nav > li {
+  /* .container .nav > li {
     padding: 10px;
     margin: 25px 0;
-  }
+  } */
 
   .container .nav li img {
     width: 35px;
@@ -71,11 +71,9 @@ li {
     justify-content: space-around;
   }
 
-  .container .nav > li {
-    padding: 5px;
+  .container .nav li a {
     background-color: black;
     border-radius: 15%;
-    margin: 2% 0;
   }
 
   .container .nav li img {

@@ -148,6 +148,14 @@ body {
   body {
     font-size: 0.8em;
   }
+
+  .banner {
+    position: absolute;
+    width: 22%;
+    transform: rotate(15deg);
+    left: -1%;
+    bottom: 2%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -158,5 +166,13 @@ body {
 
   body {
     font-size: 0.7em;
+  }
+
+  .banner {
+    position: absolute;
+    width: 35%;
+    transform: rotate(15deg);
+    left: -1%;
+    bottom: 2%;
   }
 }

@@ -27,11 +27,11 @@
 }
 
 .history-title li a:hover {
-  background-color: red;
+  background-color: rgb(255, 250, 180);
 }
 
 .history-title .active {
-  background-color: yellow;
+  background-color: rgb(255, 227, 175);
 }
 
 .dropdown-content {
@@ -93,16 +93,21 @@
   background: url("../image/social.jpg")-510px -66px;
 }
 
-ul.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.menu {
+  text-align: center;
 }
 
 ul.menu li a {
-  height: 25px;
+  height: 50px;
   line-height: 50px;
-  padding-left: 60px;
+  width: 75px;
+  background-color: green;
+  display: inline-block;
+  margin: 20px;
+}
+
+ul.menu li {
+  display: inline-block;
 }
 
 @media screen and (max-width: 688px) {
@@ -118,11 +123,11 @@ ul.menu li a {
   .header .link-category {
     margin-top: 20px;
   }
-
+  /* 
   .container .nav > li {
     padding: 10px;
     margin: 25px 0;
-  }
+  } */
 
   .container .nav li img {
     width: 35px;
@@ -146,11 +151,8 @@ ul.menu li a {
     justify-content: space-around;
   }
 
-  .container .nav > li {
-    padding: 5px;
-    background-color: black;
+  .container .nav li a {
     border-radius: 15%;
-    margin: 2% 0;
   }
 
   .container .nav li img {
