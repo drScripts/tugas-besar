@@ -5,58 +5,46 @@
 }
 
 /*Ray Jo*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+
+.history-title {
   background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  border: 1px solid black;
 }
 
-li {
-  float: left;
+.history-title li {
+  list-style-type: none;
+  height: 30px;
 }
 
-li a,
-.dropbtn {
-  display: inline-block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
+.history-title li a {
   text-decoration: none;
+  color: black;
+  font-size: large;
 }
 
-li.dropdown {
-  display: inline-block;
+.history-title li a:hover {
+  background-color: red;
+}
+
+.history-title .active {
+  background-color: yellow;
 }
 
 .dropdown-content {
   display: none;
-  background-color: #f0b6ff;
-  min-width: 160px;
-  box-shadow: 0px 8px 0px rgb(255, 132, 214);
-  z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12 px 16px;
-  text-decoration: none;
+.dropdown-content.active {
   display: block;
-  text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown li a:hover,
-.dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-.dropdown li a:hover .dropdown-content {
-  display: block;
+.history-about {
+  background-color: beige;
+  padding: 20px;
 }
 
 .logoAndInfo {

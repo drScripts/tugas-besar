@@ -17,12 +17,8 @@
   border-radius: 30px;
 }
 
-.header .link-category {
+.header .gap {
   flex: 1;
-  display: flex;
-  font-size: 18px;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .header .search-box input {
@@ -36,13 +32,6 @@
 
 .header .search-box input:focus {
   outline: none;
-}
-
-.header .link-category li,
-.header .link-category li a {
-  list-style-type: none;
-  color: white;
-  text-decoration: none;
 }
 
 .header .search-box img {
@@ -88,7 +77,7 @@
 }
 
 .player-status {
-  display: flex;
+  display: none;
   width: 100%;
   height: 86px;
   padding: 14px;
@@ -211,10 +200,6 @@
     width: 40%;
   }
 
-  .header .link-category {
-    font-size: 16px;
-  }
-
   .player-status .disc-song {
     width: 100px;
     height: 90px;
@@ -245,17 +230,9 @@
     flex-direction: column;
   }
 
-  .header .link-category {
-    margin-top: 20px;
-  }
-
   .container .nav li img {
     width: 35px;
     height: 35px;
-  }
-
-  .header .link-category {
-    font-size: 18px;
   }
 
   .player-status .disc-song {
@@ -281,11 +258,6 @@
 @media screen and (max-width: 490px) {
   .body-cards .box {
     width: 90%;
-  }
-
-  .link-category li a {
-    font-size: 13px;
-    font-weight: bolder;
   }
 
   .container {

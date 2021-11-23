@@ -57,6 +57,7 @@ $(document).ready(function () {
 
   $(".containing .toggle").click(function () {
     $(".player-status").slideToggle(1000);
+    $(".player-status").css("display", "flex");
   });
 
   $(".box").click(function () {
