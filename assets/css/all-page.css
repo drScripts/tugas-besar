@@ -175,4 +175,9 @@ body {
     left: -1%;
     bottom: 2%;
   }
+
+  .splash-screen img {
+    width: 130%;
+    height: 100%;
+  }
 }
